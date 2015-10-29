@@ -34,6 +34,8 @@ By default, WS-Discovery uses a UDP based multicast transport to announce new se
 for existing services. However, it also supports a managed mode where a discovery proxy is used
 to reduce the amount of multicast traffic required.
 
+What are the advantages of using it? You can publish your services on your LAN network, so clients don't need to know beforehand the URL of the services they want to use. Also, you can change the machine running the service easily without changing the clients code.
+
 ###How to Enable WS-Discovery
 According to [Apache CXF docs](http://cxf.apache.org/docs/ws-discovery.html), to enable CXF to send "Hello" announcements when services and endpoint are started, 
 the cxf-services-ws-discovery-service and cxf-services-ws-discovery-api jars need to be available on the classpath. 
