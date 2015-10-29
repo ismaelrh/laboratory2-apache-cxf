@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.translator/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="TranslatorServiceImplService" targetNamespace="http://service.translator/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://service.translator/" elementFormDefault="unqualified" targetNamespace="http://service.translator/" version="1.0">
+
+  <xs:element name="translate" type="tns:translate"/>
+
+  <xs:element name="translateResponse" type="tns:translateResponse"/>
+
+  <xs:complexType name="translate">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="translateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:translatedText"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="translatedText">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="from" type="xs:string"/>
+      <xs:element minOccurs="0" name="to" type="xs:string"/>
+      <xs:element minOccurs="0" name="translation" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="translate">
+    <wsdl:part element="tns:translate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="translateResponse">
+    <wsdl:part element="tns:translateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="TranslatorService">
+    <wsdl:operation name="translate">
+      <wsdl:input message="tns:translate" name="translate">
+    </wsdl:input>
+      <wsdl:output message="tns:translateResponse" name="translateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TranslatorServiceImplServiceSoapBinding" type="tns:TranslatorService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="translate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="translate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="translateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TranslatorServiceImplService">
+    <wsdl:port binding="tns:TranslatorServiceImplServiceSoapBinding" name="TranslatorServiceImplPort">
+      <soap:address location="http://localhost:8080/api/translator"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

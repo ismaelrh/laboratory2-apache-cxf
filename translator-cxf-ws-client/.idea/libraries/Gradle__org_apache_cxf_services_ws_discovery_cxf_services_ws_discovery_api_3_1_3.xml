@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.apache.cxf.services.ws-discovery:cxf-services-ws-discovery-api:3.1.3">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf.services.ws-discovery/cxf-services-ws-discovery-api/3.1.3/271cbcdf3ef925890bc34a394f6854e13701c9cb/cxf-services-ws-discovery-api-3.1.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.cxf.services.ws-discovery/cxf-services-ws-discovery-api/3.1.3/cd77f100c045695e20d3d1d1ca968c8c6ada31ea/cxf-services-ws-discovery-api-3.1.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
