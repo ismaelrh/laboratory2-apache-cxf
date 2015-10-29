@@ -12,6 +12,7 @@ Enter to the directory and run the server with ```gradle run```. Then, open the 
 You can view the Service WSDL at [http://localhost:8080/api/translator?wsdl](http://localhost:8080/services/translator?wsdl). 
 
 NOTE: The address, port and context may change when deployed to a Server.
+WARNING: Don't forget to add your "application.properties" to the resource folder.
 
 ##How to test WS-Discovery (translator-cxf-ws-client)
 NOTE: To test it, the server has to be running on the a machine on the same LAN.
